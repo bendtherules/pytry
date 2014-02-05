@@ -1,0 +1,4 @@
+Whenever possible, version-unspecific code is written.
+If there is a major incompatibility such that no one syntax will provide the same result in both versions, different version of the code is written.
+The un-numbered version is supposed to contain 2.7 version specific code during dev time, but from time-to-time it is (if possible) made 3.2 compatible and the version 3.2 is updated (may need slight change).
+.pyc files are not needed.

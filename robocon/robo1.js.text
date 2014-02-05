@@ -1,0 +1,259 @@
+title: Intro to Autonomous Robotics
+author: Robodarshan :)
+
+
+%%%%%
+%% Add some inline style rules...
+
+%css
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h2 {
+    text-align: center;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+img.side {
+    display: inline;
+}
+body {
+  background-image: -webkit-linear-gradient(top left, silver, white);
+  background-image:    -moz-linear-gradient(top left, silver, white);
+  background-image:     -ms-linear-gradient(top left, silver, white);
+  background-image:      -o-linear-gradient(top left, silver, white);
+  background-image:         linear-gradient(top left, silver, white);
+}
+
+.step {
+  width: 900px;
+  height: 700px;
+  padding: 20px 30px;
+
+  font-size: 34px;
+  text-align: left;
+
+  opacity: 0.1;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.slide {
+  background: white;
+}
+
+code {
+  background-color: yellow;
+  font-size: 14px;
+}
+
+%end
+
+
+%%%%%%%%%%%%%%%%%%%
+%% Here we go...
+
+
+!SLIDE x=0 y=0 scale=2 
+
+##Introduction to *Robotics*    
+
+<img src="intro_to_robotics.jpg" width="100%" />
+
+
+<img src="robodarshan.png" width="100%" />  
+
+!SLIDE x=2000 y=0 rotate-y=-50 scale=2
+
+##WELCOME EVERYBODY
+
+![](./face_detect.jpg)
+
+// To be replaced by live face detected image
+
+!SLIDE x=-2000 y=0 rotate-y=50 scale=2
+
+##*What is "Robot"* ?  
+
+ <img src="troll_final.jpg" width="72%" />
+
+
+!SLIDE x=0 y=-800 scale=1 z=500 rotate-x=-30
+
+##Let's ***Google*** it  
+
+ <img class="side" src="robot_def.jpg" width="85%"/>  
+ 
+
+!SLIDE x=0 y=1500 rotate-x=45 scale=5
+
+_**admin**_ : OK **Bot**, show us what can you do ...  
+
+_**bot**_ : I can ...  
+
+* Learn Skills ranging from electronics,  mechanics, controls, programming, etc ...  
+*  Work in Industry assembly lines, like a robotic arm used for car-painting, parts assembling, etc...  
+
+<img src="industry.jpg" width="50%" />
+
+!SLIDE x=0 y=-1500 z=-1500 rotate-x=45 scale=5
+##Contd...
+
+* Function as a mobile robot such as terrestial, aerial, aquatic or hybrid vehicle
+ be it manually controlled or autonomous.  
+ 
+* Work in swarms to co-ordinate a task  
+
+<img src="swarm.jpg" width="50%" />
+
+!SLIDE x=3500 y=1500 rotate-x=45 rotate-z=90 scale=6
+
+##**So, what will you learn today ?**  
+
+How about some robotics ?  
+Well, we guess you already knew that :)
+
+* First we'll talk about ***Manual Robotics***, the ones controlled by human (yup, that's you)  
+
+* Then, we'll move on to autonomous bots, the ones which can perform simple tasks on their own. ( Remember Wall-E ? )  
+
+* If time permits, we'll talk about robots with **"eyes"** (err.. cameras).
+
+!SLIDE x=3500 y=-4000 z=-2500 rotate-x=45 rotate-z=90 scale=4
+
+##Mechanical Construction  
+
+- **Chassis**, i.e. the basic body structure (generally rectangular)
+    - Preferred Material : Flex Board (25 cm x 25 cm)
+    <img src="board.jpg" width="25%"/>
+    
+    - Others : Motor Clamps  
+    <img src="clamps.jpg" />
+
+!SLIDE x=4600 y=2550 scale=6 rotate-z=0 rotate-x=0 rotate-y=60 z=5000
+
+## **Wheels**
+
+- **Normal Wheels** , the ones you see in cars ... toy cars.  
+    <img class="side" src="all_wheels.jpg" width="25%"/>
+    <img class="side" src="wheel1.jpg" width="19%"/>
+    
+- **Castor Wheels** , a non-drivable wheel that is mounted at the bottom of a vehicle (or robot, in our case), that can move in any direction.  You can find them under the ( legs of ) movable tables.  
+    <img class="side" src="cas1.jpg" width="20%"/>
+    <img class="side" src="cas2.jpg" width="20%"/>
+    
+
+!SLIDE x=5600 y=3000 z=0 rotate-x=0 rotate-y=-45 rotate-z= scale=6
+
+##**DC Motors**  
+
+- Runs on DC input.
+- Types
+    - **Geared Motor :**  
+        - Pros:
+            1. Used for bringing about a change in speed, by the use of gears.
+            2. Also used to change axis and direction of motion  
+        - Cons:
+            1. No feedback mechanism.
+
+
+
+!SLIDE x=6000 y=4000 scale=2
+
+##**DC Motors (contd.)**
+  
+- Types (contd.)
+    - **Servo Motors**
+        - Pros:
+            - Used for high torque operations
+        - Cons:
+            - Costly
+
+<img class="side" src="motor1.jpg" width="40%" /> <img class="side" src="motor2.jpg" width="40%" />
+
+!SLIDE x=6200 y=4300 z=-1000 rotate-x=40 rotate-y=-30 scale=1
+
+##Motion Direction Control  
+
+- H-Bridge Circuit
+    - Simple electrical circuit using which you can change the polarity at the load.  
+    
+<img src="h-br.gif" width="40%" />
+    
+!SLIDE x=8000 y=4300 z=-500 rotate-x=20 rotate-y=-45 scale=1
+
+- Example:
+    - DPDT Switch:  
+    Switching device that uses H-Bridge principle to change the polarity of load and hence the motion of the motor whenever needed.  
+    
+<img class="side" src="dpdt2.gif" width="40%" />
+<img  class="side" src="dpdt1.jpg" width="40%" />
+
+!SLIDE x=5000 y=4500 scale=10  rotate-y=0 rotate-x=-30
+##Drives
+
+- Types of drive we'll be using:
+    - 2 wheel drive, 2 gearbox with castor wheel
+    - 4 wheel drive, 4 gearbox
+- Others
+    - N Wheel Drive
+    - Tank Wheel Drive
+
+!SLIDE x=8000 y=500 z=1000 rotate-y=-15 scale=6 rotate-x=-15
+
+##**2 wheel drive with castor wheel**
+
+It has
+
+- 2 active wheels with gearboxes
+- 1 castor wheel for balance and free movement  
+
+<img src="dr1.jpg" width="40%" />
+
+
+!SLIDE x=13000 y=1500 z=1000 rotate-y=45 scale=10 rotate-x=45
+
+##**4 wheel drive with 4 gearboxes**
+
+It has 4 wheels connected with 4 gearboxes for fast and agile movement 
+
+<img src="dr2.jpg" width="40%" />
+    
+!SLIDE x=18000 y=4500 rotate-y=65 scale=6 rotate-x=135 z=-4500
+
+##**Locomotion using Differential Drive system**
+
+bot: I wanna move...  
+admin: How?  
+bot: Well now that you have asked so nicely...
+
+- Differential Drive is one way to accomplish this  
+<img src="drive.jpg" width="70%" />
+- The simplest motions (shown above) occur when all of the wheels are moving  
+- Different motions are also possible if we keep one/many wheels static
+
+!SLIDE x=7000
+
+**SHOW TIME**  
+
+We're pretty sure that you are bored to hell.  
+So, here's a little treat for you.  
+
+Sit back and enjoy :D
+
+!SLIDE rotate-x=00 x=5000 y=500 z=-500 rotate-y=-30
+**Question time**  
+
+Now, Throw something at us 
+
+Just dont throw an error :P
+
+%% The End
+%%%%%%%%%%%%%%%

@@ -1,0 +1,12 @@
+1.  Schedule_interval with internal_update method in gameObject class
+    internal_update should include update() to be overridden by sub-class.
+    internal_update should allow rot_speed and hspeed, vspeed, speed, etc.
+    ** Better way - use list_class and list_instance and list_batch
+2. Handle collision in a novel way
+3. Investigate default draw method. Allow for multiple images (already possible - every sprite loaded gets drawn).
+4. Use a batch_list internally for drawing.
+5. Convert pygame rect, circle, line classes.
+6. Seperate resource loading, level loading (with *similar multiple instance* creation helper method).
+7. Allow timers.
+8. Handle proper deletion.
+9. Keep proper track of handlers on level reload.

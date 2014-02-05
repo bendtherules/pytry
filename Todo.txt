@@ -1,0 +1,9 @@
+#ToDo A small app to create required rect, circle or mask
+#ToDo Download a animated gif to joined images creator and code to control the animation
+#ToDo Create the first platformer with crouch-able ball
+#ToDo Mix and match rect and circle (lower part rect, upper circle)
+#ToDo Sprite parts mix-and-match generator to create customizable avatars (Allow logic if possible)
+#ToDo Take a changing background and make a blur effect at both right and left (use pygame.transform.average_color())
+#ToDo keep track of all derived objects, superclass to take care of subclass group
+#ToDo1 Do your own blit
+Note: Don't use get_fps from first(gives zero division error)
