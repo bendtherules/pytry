@@ -7,6 +7,8 @@ c1=time.clock()
 gesture_time=30
 detection_sleep=False
 blobs=[None]*gesture_time
+
+debug=True
 #d=s.Display()
 i1=c.getImage()
 img_width_ori=i1.width
@@ -49,10 +51,12 @@ while True:
             print(right_step,left_step)
             if right_step>left_step:
                 print("Left to right")
-                press.press_up()
+                if not debug:
+                    press.press_up()
             else:
                 print("Right to left")
-                press.press_down()
+                if not debug:
+                    press.press_down()
             print(c1)
             detection_sleep=gesture_time*2
         else:
