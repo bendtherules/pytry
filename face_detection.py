@@ -12,7 +12,7 @@ while count<5:
         f.draw(width=2)
     i.show()
 
-i.flipHorizontal().save(r"E:\Babu\pytry\robocon\face_detect.jpg")
+i.flipHorizontal().save(r"D:\Babu\github_files\pytry\robocon\face_detect.jpg")
 ##f.show()
 ##import time
 ##cl=time.clock()

@@ -7,8 +7,10 @@ c1=time.clock()
 gesture_time=30
 detection_sleep=False
 blobs=[None]*gesture_time
+fname = r"C:\Users\abhas\Desktop\test.avi"
+vs = s.VideoStream(fps=25,filename=fname,framefill=False)
 
-debug=True
+debug=False
 #d=s.Display()
 i1=c.getImage()
 img_width_ori=i1.width
@@ -16,8 +18,11 @@ img_height=i1.height
 i1=i1.crop(img_width_ori/4,0,img_width_ori*3/4,img_height/2).flipHorizontal()
 img_width=img_width_ori/2
 count=0
+print("Recording starts.. :D")
 while True:
-    i2=c.getImage().crop(img_width_ori/4,0,img_width_ori*3/4,img_height/2).flipHorizontal()
+    i2=c.getImage()
+    vs.writeFrame(i2)
+    i2=i2.crop(img_width_ori/4,0,img_width_ori*3/4,img_height/2).flipHorizontal()
     i3=(i2-i1)+(i1-i2)
     i1=i2
     i3=i3.stretch(10,255).erode(2).dilate(2)
@@ -52,10 +57,12 @@ while True:
             if right_step>left_step:
                 print("Left to right")
                 if not debug:
+                    print("Up pressed")
                     press.press_up()
             else:
                 print("Right to left")
                 if not debug:
+                    print("Down pressed")
                     press.press_down()
             print(c1)
             detection_sleep=gesture_time*2

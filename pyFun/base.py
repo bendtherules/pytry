@@ -5,17 +5,17 @@ import pygame.gfxdraw
 from pygame.locals import * # imports the constants
 from math import *
 #Mouse constants
-B_LEFT_CLICK=1
-B_RIGHT_CLICK=3
-B_MIDDLE_CLICK=2
-B_SCROLLUP=4
-B_SCROLLDOWN=5
+B_LEFT_CLICK   =1
+B_RIGHT_CLICK  =3
+B_MIDDLE_CLICK =2
+B_SCROLLUP     =4
+B_SCROLLDOWN   =5
 
 # Direction constants
-TOP=1
-LEFT=2
-BOTTOM=3
-RIGHT=4
+TOP    =1
+LEFT   =2
+BOTTOM =3
+RIGHT  =4
 
 class fun_Game(object):
     list_class=uniquelist()
