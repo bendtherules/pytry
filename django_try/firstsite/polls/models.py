@@ -1,7 +1,6 @@
 from django.db import models
 import datetime
 from django.utils import timezone
-
 # Create your models here.
 class Poll(models.Model):
     question=models.CharField(max_length=200)
@@ -9,13 +8,13 @@ class Poll(models.Model):
 
     def __unicode__(self):
         return self.question
-
-    def was_published_recently(self):
-        return self.pub_date>=timezone.now()-datetime.timedelta(days=1)
+    def time_passed(self):
+        return timezone.now()-self.pub_date
 
 class Choice(models.Model):
     poll=models.ForeignKey(Poll)
     choice_text=models.CharField(max_length=200)
     votes=models.IntegerField(default=0)
+
     def __unicode__(self):
         return self.choice_text
